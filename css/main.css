@@ -1,0 +1,17 @@
+body{
+	font-family: 'open-sans', sans-serif;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+h1{
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+.container{
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	width:80vw;
+}
