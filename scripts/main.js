@@ -1,4 +1,9 @@
 "use strict";
+
+//NOTE: Most of this code comes from the curriculum currently on beta.freecodecamp.com. I take no credit for it's creation
+//it is only here to assist in my learning.
+
+
 /*const FAV_PET = "Cats";
 FAV_PET = "Dogs"; // returns error
 */
@@ -113,4 +118,60 @@ console.log(stats); // should be object
 console.log(half(stats)); // should be 28.015
 
 
-document.getElementById("display").innerHTML = half(stats);
+
+const result = {
+    success: ['max_length', 'no-amd', 'prefer-arrow-functions'],
+    failure: ['no-var', 'var-on-top', 'linebreak'],
+    skipped: ['id-blacklist', 'no-dup-keys']
+};
+/* Alter code below this line */
+const resultDisplay = `<li class="text-warning">${result.failure[0]}</li> 
+                       <li class="text-warning">${result.failure[1]}</li>
+                       <li class="text-warning">${result.failure[2]}</li>`;
+/* Alter code above this line */
+console.log(resultDisplay);
+/**
+ * 
+ * should look like this
+ * <li class="text-warning">no-var</li>
+ *  <li class="text-warning">var-on-top</li>
+ *  <li class="text-warning">linebreak</li>
+ **/
+
+
+/* Alter code below this line */
+const createPerson = (name, age, gender) => ({name, age, gender});
+
+/* Alter code above this line */
+console.log(createPerson('Zodiac Hasbro', 56, 'male')); // returns a proper object
+
+
+/* Alter code below this line */
+const Person = (name, age, gender) => {
+    return {
+        name: name,
+        age: age,
+        gender: gender,
+        sendFriendRequest(person){
+            console.log(`Sending request to ${person.name}`);
+        }
+    };
+};
+/* Alter code above this line */
+const zod = Person("Zodiac Hasbro", 56, 'male');
+const yan = Person("Yanoshi Mimoto", 55, 'male');
+zod.sendFriendRequest(yan);
+
+
+/* Alter code below this line */
+class Vegetable {
+  constructor(name){
+    this.name = name;
+  }
+}
+/* Alter code above this line */
+const carrot = new Vegetable('carrot');
+console.log(carrot.name); // => should be 'carrot'
+
+
+document.getElementById("display").innerHTML = carrot.name;;
